@@ -1,9 +1,15 @@
 import React from 'react';
+import { Provider } from 'react-redux';
 import { render } from '@testing-library/react';
 import App from './App';
 
-test('renders learn react link', () => {
-  const { getByText } = render(<App />);
-  const linkElement = getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
+const mockStore = {
+  getState: ()=>({}),
+  subscribe: ()=>{},
+  dispatch: ()=>{},
+};
+
+
+test('renders app without error', () => {
+  render(<Provider store={mockStore}><App /></Provider>);
 });

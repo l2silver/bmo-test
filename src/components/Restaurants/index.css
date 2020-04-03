@@ -1,0 +1,9 @@
+.restaurants__wrapper {
+  display: block;
+  width: 600px;
+  margin: 0 auto;
+}
+.restaurants__ul {
+  list-style-type: none;
+  margin-bottom: 0;
+}

@@ -1,0 +1,14 @@
+.general__input__input {
+  display: block;
+  margin: 5px 5px;
+  border-radius: 5px;
+  border-width: 1px;
+  padding: 3px;
+  width: 100%;
+}
+.general__input__label {
+  display: block;
+  text-transform: capitalize;
+  margin: 5px 5px;
+  width: 100%;
+}
