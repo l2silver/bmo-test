@@ -1,7 +1,7 @@
 1. How long did you spend on the coding test? What would you add to your solution if you had more time? If you didn't spend much time on the coding test then use this as an opportunity to explain what you would add.
 
 ~2 hours
-If I had more time, I would add tests for the selectors, the actions, and reducers. I would propertly style everything, either using postcss or sass. In general, I would add more tests to everything to cover corner cases. I would add eslint for linting, typescript for type protection. I would add proper paging for the requested resources.
+If I had more time, I would add tests for the selectors, the actions, and reducers. I would propertly style everything, either using postcss or sass. In general, I would add more tests to everything to cover corner cases. I would add eslint for linting, typescript for type protection. I would add proper paging for the requested resources. Would remove devtools.
 
 2.       What was the most useful feature that was added to the latest version of your chosen language? Please include a snippet of code that shows how you've used it.
 
