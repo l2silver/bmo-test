@@ -15,12 +15,14 @@ export const Restaurants = memo(function Restaurants(props) {
   const [ error, setError ] = useState('');
   const search = (c)=>{
     setCity(c);
-    props.search(c).then(()=>{
-      setError('')
-    })
-    .catch((err)=>{
-      setError(err.message);
-    });
+    if(c){
+      props.search(c).then(()=>{
+        setError('')
+      })
+      .catch((err)=>{
+        setError(err.statusText);
+      });
+    }
   }
   let restaurants = get(props, `restaurants.${city}`, []);
   if(filter){
@@ -47,7 +49,7 @@ export const Restaurants = memo(function Restaurants(props) {
         <Input onChange={setFilter} name="refine" placeholder="Refine your search" />
       </form>
       {
-        error && <div role="alert">
+        error && <div role="alert">Error: 
           {error}
         </div>
       }
@@ -74,7 +76,7 @@ export const mapDispatchToProps = (dispatch)=>({
     return services.byCity(city)
     .then(({restaurants})=>{
       dispatch(byCity(city, restaurants));
-    })
+    });
   }
 });
 export default connect(mapStateToProps, mapDispatchToProps)(Restaurants);

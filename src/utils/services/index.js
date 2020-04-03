@@ -1,3 +1,3 @@
 export function url(resource){
-  return ` http://opentable.herokuapp.com/api/${resource}`;
+  return ` https://opentable.herokuapp.com/api/${resource}`;
 }
